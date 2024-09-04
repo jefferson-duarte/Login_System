@@ -7,7 +7,7 @@ session = return_session()
 class Register:
 
     @classmethod
-    def save(cls, name, email, password):
+    def save(cls, name: str, email: str, password: str) -> None:
         customer = RegisterCustomer(name=name, email=email, password=password)
         session.add(customer)
         session.commit()
