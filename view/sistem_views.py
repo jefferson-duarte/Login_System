@@ -50,3 +50,4 @@ def register_view():
             print(f'User "{name}" registed successfully.')
             sleep(5)
             break
+        sleep(5)

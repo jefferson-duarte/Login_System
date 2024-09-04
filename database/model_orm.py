@@ -21,7 +21,7 @@ class RegisterCustomer(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(50))
     email = Column(String(50))
-    password = Column(Integer())
+    password = Column(String(64))
 
 
 Base.metadata.create_all(engine)
