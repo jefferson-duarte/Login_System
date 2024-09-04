@@ -25,6 +25,7 @@ def login_view():
             break
         print('Email or password invalid.')
         sleep(5)
+        break
 
 
 def register_view():
@@ -51,3 +52,4 @@ def register_view():
             sleep(5)
             break
         sleep(5)
+        break

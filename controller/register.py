@@ -18,10 +18,18 @@ class ControllerRegister:
             return print('Email already registed.')
 
         except NoResultFound:
-            if is_valid:
+            if len(name) < 3:
+                return print('Name must contain least than 3 characters.')
+
+            elif len(password) < 5:
+                return print('Password must contain least than 5 characters.')
+
+            elif not is_valid:
+                return print('Password and confirm password does not match.')
+
+            else:
                 register.Register.save(name, email, stored_hash)
                 return True
-            return print('Password and confirm password does not match.')
 
 
 class ControllerLogin:
